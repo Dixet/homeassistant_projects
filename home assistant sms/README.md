@@ -23,7 +23,7 @@ You can also create the profile and task easily yourself
 In tasker go to the Tasks tab and press the plus sign. Enter a name for your task, for instance "Send Text Message".
 In the task details press the plus sign to create the first and only step of the task. In the list that pops up find and select `Send SMS` (you can find it under the `Phone` section, or just start typing SMS and it will be in the list)
 
-![Screenshot of the Tasker SMS task](https://github.com/Dixet/homeassistant_projects/blob/main/home%20assistant%20sms/readme_media/tasker_sms_task.jpg)
+![Screenshot of the Tasker SMS task](/home%20assistant%20sms/readme_media/tasker_sms_task.jpg)
 
 In the screen that follows, prepare the number and text variables that you will send from Home Assistant. Enter the text _%number_ in the `Number` field and the text _smstext_ in the `Message` field. You can use any variable name you like, as long as you use the same names here as you will later on in Home Assistant. 
 
@@ -35,7 +35,7 @@ Now the power of Tasker comes to play. You will make a new profile that will lis
 Select the `PROFILES` tab and press the plus button to create a new Profile. Select the `Event` profile type. In the list that follows find the `Intent received` event. You can find it under `Sysem`, or just start typing "intent" and you'll find it. 
 
 
-![Screenshot of the Tasker Intent profile](https://github.com/Dixet/homeassistant_projects/blob/main/home%20assistant%20sms/readme_media/tasker_intent_profile.jpg)
+![Screenshot of the Tasker Intent profile](/readme_media/tasker_intent_profile.jpg)
 
 In this screen, all you have to do is enter a value in the Action field. This is the name in the intent sent from Home Assistant Tasker will listen to. I chose _Send SMS_, but you can use anything you like. Just make sure you use the same name later on in Home Assistant. 
 
