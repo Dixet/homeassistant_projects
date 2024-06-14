@@ -13,3 +13,14 @@ So I was looking for a way to send SMS text messages directly from my own phone 
 * [Tasker](https://play.google.com/store/apps/details?id=net.dinglisch.android.taskerm&hl=nl). One of the most versatile apps out there and my go-to companion for years to tweak my phone and have repeating tasks automated. The free version should work fine, but the paid version will allow you to do so much more for just a small amount of money
 * Make sure you have granted tasker the `Send Text Messages` permission
 
+## Setting up tasker
+Tasker has the option to send sext messages built in. All you need to do is create a task to send a text message and a profile that will run that task. 
+I've already created both, so you can use them by importing the [tasker_sendsms.xml](https://github.com/Dixet/homeassistant_projects/blob/main/home%20assistant%20sms/tasker_sendsms.xml) file into tasker. Importing is done by long-pressing the bottom bar and choosing Import Project.
+
+You can also create the profile and task easily yourself
+
+### Creating the Tasker task
+In tasker go to the Tasks tab and press the plus sign. Enter a name for your task, for instance "Send Text Message".
+In the task details press the plus sign to create the first and only step of the task. In the list that pops up find and select `Send SMS` (you can find it under the `Phone` section, or just start typing SMS and it will be in the list)
+
+![Screenshot of the Tasker SMS task](https://github.com/Dixet/homeassistant_projects/blob/main/home%20assistant%20sms/readme_media/tasker_sms_task.jpg)
