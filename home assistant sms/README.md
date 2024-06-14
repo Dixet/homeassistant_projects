@@ -35,7 +35,7 @@ Now the power of Tasker comes to play. You will make a new profile that will lis
 Select the `PROFILES` tab and press the plus button to create a new Profile. Select the `Event` profile type. In the list that follows find the `Intent received` event. You can find it under `Sysem`, or just start typing "intent" and you'll find it. 
 
 
-![Screenshot of the Tasker Intent profile](/readme_media/tasker_intent_profile.jpg)
+![Screenshot of the Tasker Intent profile](/home%20assistant%20sms/readme_media/tasker_intent_profile.jpg)
 
 In this screen, all you have to do is enter a value in the Action field. This is the name in the intent sent from Home Assistant Tasker will listen to. I chose _Send SMS_, but you can use anything you like. Just make sure you use the same name later on in Home Assistant. 
 
@@ -44,7 +44,7 @@ Press back twice to save the the profile. Tasker will show you a list of tasks t
 ### Create a home assistant Script
 The easiest way to send text messages is to create a script. That way you can re-use the same intelligence from your dashboards with the push of a button or from any automation. 
 
-I've already created the script for you, so just copy the YAML from [scripts.yaml](https://github.com/Dixet/homeassistant_projects/blob/main/home%20assistant%20sms/scripts.yaml) into a new script. 
+I've already created the script for you, so just copy the YAML from [scripts.yaml](/homeassistant_projects/blob/main/home%20assistant%20sms/scripts.yaml) into a new script. 
 
 To do this go to you Autmations section in home assistant. On the `scripts` tab create a new script. Use the three-dot menu of the right and go to YAML mode. There just paste the YAML. 
 
@@ -60,7 +60,7 @@ What it does is easy, so you can create it manually if you want by following the
         intent_action: Send SMS
         intent_extras: number:{{phonenumber}},smstext:{{textmessage|urlencode}}:String.urlencoded```
 
-The `intent_package_name` is the internal name of the Tasker app, so this will tell the Companion app to send the intent to Tasker. The `intent action` is the name Tasker will listen to and the value has to be exactly what you entered in the first step [Creating the Tasker task](https://github.com/Dixet/homeassistant_projects/tree/main/home%20assistant%20sms#creating-the-tasker-task). Finally, the `intent_extras` will contain the data that is exposed to the Tasker task. Remeber we entered `%number` and `smstext` in the first step? Those exact names, without the percentage-sign should be entered here, followed by respectively the `phonenumber` field and the `textmessage` field, both enclosed in double curly brackets to tell home assistant these are templates that need to be evaluated. The last part, `:String.urlencoded``should be appended so you can use reserved charatecters like a comma in the text. Otherwise the comma would mark the start of a new variable in this list. 
+The `intent_package_name` is the internal name of the Tasker app, so this will tell the Companion app to send the intent to Tasker. The `intent action` is the name Tasker will listen to and the value has to be exactly what you entered in the first step [Creating the Tasker task](/home%20assistant%20sms#creating-the-tasker-task). Finally, the `intent_extras` will contain the data that is exposed to the Tasker task. Remeber we entered `%number` and `smstext` in the first step? Those exact names, without the percentage-sign should be entered here, followed by respectively the `phonenumber` field and the `textmessage` field, both enclosed in double curly brackets to tell home assistant these are templates that need to be evaluated. The last part, `:String.urlencoded``should be appended so you can use reserved charatecters like a comma in the text. Otherwise the comma would mark the start of a new variable in this list. 
 
 Now just save your script and start texting!
 
@@ -69,7 +69,7 @@ Go to the developer tools to test your script. Select the `SERVICES tab end choo
 Enter your own phone number for testing purposes and a text message and press _call service_. Wait a few seconds and voilà, you've got a message!
 
 Call the service
-![Screenshot of the Send message service](https://github.com/Dixet/homeassistant_projects/blob/main/home%20assistant%20sms/readme_media/sms_call_service.png)
+![Screenshot of the Send message service](/home%20assistant%20sms/readme_media/sms_call_service.png)
 
 And see the result!
-![Screenshot of the Send message service](https://github.com/Dixet/homeassistant_projects/blob/main/home%20assistant%20sms/readme_media/sms_text_screenshot.jpg)
+![Screenshot of the Send message service](/home%20assistant%20sms/readme_media/sms_text_screenshot.jpg)
