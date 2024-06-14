@@ -15,7 +15,7 @@ So I was looking for a way to send SMS text messages directly from my own phone 
 
 ## Setting up tasker
 Tasker has the option to send sext messages built in. All you need to do is create a task to send a text message and a profile that will run that task. 
-I've already created both, so you can use them by importing the [tasker_sendsms.xml](https://github.com/Dixet/homeassistant_projects/blob/main/home%20assistant%20sms/tasker_sendsms.xml) file into tasker. Importing is done by long-pressing the bottom bar and choosing Import Project.
+I've already created both, so you can use them by importing the [tasker_sendsms.xml](/home%20assistant%20sms/tasker_sendsms.xml) file into tasker. Importing is done by long-pressing the bottom bar and choosing Import Project.
 
 You can also create the profile and task easily yourself
 
@@ -44,7 +44,7 @@ Press back twice to save the the profile. Tasker will show you a list of tasks t
 ### Create a home assistant Script
 The easiest way to send text messages is to create a script. That way you can re-use the same intelligence from your dashboards with the push of a button or from any automation. 
 
-I've already created the script for you, so just copy the YAML from [scripts.yaml](/homeassistant_projects/blob/main/home%20assistant%20sms/scripts.yaml) into a new script. 
+I've already created the script for you, so just copy the YAML from [scripts.yaml](/home%20assistant%20sms/scripts.yaml) into a new script. 
 
 To do this go to you Autmations section in home assistant. On the `scripts` tab create a new script. Use the three-dot menu of the right and go to YAML mode. There just paste the YAML. 
 
