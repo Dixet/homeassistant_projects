@@ -58,8 +58,7 @@ What it does is easy, so you can create it manually if you want by following the
    - In the data field enter the following:
      ```intent_package_name: net.dinglisch.android.taskerm
         intent_action: Send SMS
-        intent_extras: number:{{phonenumber}},smstext:{{textmessage|urlencode}}:String.urlencoded
-```
+        intent_extras: number:{{phonenumber}},smstext:{{textmessage|urlencode}}:String.urlencoded```
 
 The `intent_package_name` is the internal name of the Tasker app, so this will tell the Companion app to send the intent to Tasker. The `intent action` is the name Tasker will listen to and the value has to be exactly what you entered in the first step [Creating the Tasker task](https://github.com/Dixet/homeassistant_projects/tree/main/home%20assistant%20sms#creating-the-tasker-task). Finally, the `intent_extras` will contain the data that is exposed to the Tasker task. Remeber we entered `%number` and `smstext` in the first step? Those exact names, without the percentage-sign should be entered here, followed by respectively the `phonenumber` field and the `textmessage` field, both enclosed in double curly brackets to tell home assistant these are templates that need to be evaluated. The last part, `:String.urlencoded``should be appended so you can use reserved charatecters like a comma in the text. Otherwise the comma would mark the start of a new variable in this list. 
 
