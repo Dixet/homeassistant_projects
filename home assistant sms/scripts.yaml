@@ -1,0 +1,23 @@
+send_sms_text:
+  alias: Send SMS text
+  sequence:
+  - service: notify.<mobile_phone_name>
+    data:
+      message: command_broadcast_intent
+      data:
+        intent_package_name: net.dinglisch.android.taskerm
+        intent_action: Send SMS
+        intent_extras: number:{{phonenumber}},smstext:{{textmessage|urlencode}}:String.urlencoded
+  description: 'Send SMS text through selected phone'
+  icon: mdi:message-processing
+  fields:
+    phonenumber:
+      selector:
+        text:
+      name: phonenumber
+      required: true
+    textmessage:
+      selector:
+        text:
+      name: textmessage
+      required: true
