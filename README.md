@@ -8,4 +8,4 @@ A lot of the work I create in home assistant is too specific, but sometimes I de
 I'll be sharing those here, with a tutorial of the use cases I see and how to implement them in your own life. 
 
 ## Projects
-* [Send SMS texts without external sercices](https://github.com/Dixet/homeassistant_projects/tree/main/home%20assistant%20sms)
+* [Send SMS texts without external services](https://github.com/Dixet/homeassistant_projects/tree/main/home%20assistant%20sms)
