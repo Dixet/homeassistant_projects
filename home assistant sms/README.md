@@ -41,6 +41,7 @@ In this screen, all you have to do is enter a value in the Action field. This is
 
 Press back twice to save the the profile. Tasker will show you a list of tasks to perform when the event is triggered. Choose the task you created before, _Send Text Message_
 
+## Setting up home assistant
 ### Create a home assistant Script
 The easiest way to send text messages is to create a script. That way you can re-use the same intelligence from your dashboards with the push of a button or from any automation. 
 
